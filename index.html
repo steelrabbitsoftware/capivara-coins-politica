@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politica de Privacidade — Capivara Coins</title>
+<meta name="description" content="Politica de privacidade do jogo Capivara Coins (com.steelrabbit.capivacoins).">
+<style>
+  :root {
+    --tinta: #2c2118;      --tinta-fraca: #6b5a49;
+    --papel: #fdfaf4;      --papel-fundo: #f2ebdd;
+    --realce: #a8622a;     --linha: #e3d8c4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --tinta: #ece3d6;    --tinta-fraca: #a89880;
+      --papel: #211b15;    --papel-fundo: #171310;
+      --realce: #e0954f;   --linha: #3a2f25;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    background: var(--papel-fundo); color: var(--tinta);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main {
+    max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+    background: var(--papel); min-height: 100vh;
+  }
+  h1 {
+    font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35em;
+    text-wrap: balance; letter-spacing: -.015em;
+  }
+  h2 {
+    font-size: 1.12rem; margin: 2.25em 0 .5em; color: var(--realce);
+    text-transform: uppercase; letter-spacing: .06em;
+  }
+  h2::after {
+    content: ""; display: block; height: 1px; background: var(--linha); margin-top: .5em;
+  }
+  p { margin: 0 0 1em; }
+  ul { margin: 0 0 1em; padding-left: 1.2em; }
+  li { margin-bottom: .4em; }
+  a { color: var(--realce); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .88em; background: var(--papel-fundo);
+    padding: .1em .35em; border-radius: 3px;
+  }
+  strong { font-weight: 650; }
+  .rodape {
+    margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--linha);
+    font-size: .85rem; color: var(--tinta-fraca);
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>Política de Privacidade — Capivara Coins</h1>
+<p><strong>Última atualização:</strong> 27 de agosto de 2026</p>
+<p>Esta política de privacidade descreve como o aplicativo <strong>Capivara Coins</strong> (pacote <code>com.steelrabbit.capivacoins</code>), desenvolvido por Steel Rabbit, trata as informações dos usuários.</p>
+<h2>Resumo</h2>
+<p>O Capivara Coins é um jogo que <strong>funciona offline</strong>. Ele <strong>não pede cadastro, não usa login e não coleta dados pessoais</strong> dos usuários. A única coleta de dados no aplicativo acontece quando o próprio jogador <strong>escolhe assistir</strong> um anúncio recompensado — nesse momento, e só nesse momento, o SDK de anúncio coleta o identificador de publicidade do aparelho para exibir e medir o anúncio. Ver a seção <strong>Anúncios</strong> abaixo.</p>
+<h2>Dados coletados</h2>
+<p>O Capivara Coins não pede cadastro, não usa login, e não acessa contatos, câmera, localização ou microfone. O jogo em si — girar, construir vila, colecionar cartas, atacar vizinhos — não se conecta à internet e não envia nenhuma informação sobre o jogador.</p>
+<p>A única exceção é o <strong>anúncio recompensado opcional</strong> (ver <strong>Anúncios</strong>): quando o jogador toca em "Assistir anúncio", o aplicativo se conecta à internet só naquele momento, e o SDK do anúncio coleta o identificador de publicidade do aparelho.</p>
+<h2>Onde ficam salvos os dados do jogo</h2>
+<p>O progresso do jogo (moedas, giros, conquistas, configurações, etc.) é salvo <strong>apenas localmente</strong>, dentro do próprio aparelho do usuário. Esses dados nunca saem do dispositivo, não são enviados para nenhum servidor e não são acessados pelo desenvolvedor. Se o aplicativo for desinstalado, esses dados são apagados junto.</p>
+<h2>Anúncios</h2>
+<p>O Capivara Coins exibe <strong>um único tipo de anúncio: recompensado (rewarded), e sempre opcional</strong>. Não existe anúncio que apareça sozinho, entre telas ou durante o jogo — o jogador só vê um anúncio quando ele mesmo toca no botão pra assistir, em troca de uma recompensa específica (giros grátis).</p>
+<p>A veiculação é feita pela plataforma <strong>Unity LevelPlay / ironSource</strong>. Quando o jogador escolhe assistir um anúncio, essa plataforma coleta:</p>
+<ul><li>o <strong>identificador de publicidade</strong> do aparelho (Advertising ID do Android), usado para escolher e medir o anúncio exibido;</li><li>informações técnicas do aparelho e da sessão de anúncio (modelo, versão do sistema, dados de desempenho), conforme a própria <a href="https://unity.com/pt/legal/game-player-and-app-user-privacy-policy" rel="noopener noreferrer" target="_blank">Política de Privacidade da Unity</a>.</li></ul>
+<p>Esse dado <strong>não é coletado, guardado nem visto pelo desenvolvedor</strong> — ele vai direto do aparelho do jogador para a Unity/ironSource e as redes de publicidade que participam da veiculação. O desenvolvedor não recebe nenhuma informação pessoal do jogador nesse processo, só a confirmação de que um anúncio foi assistido até o fim (para liberar a recompensa).</p>
+<p>O jogador pode limitar ou redefinir o identificador de publicidade a qualquer momento, direto nas configurações de privacidade do próprio Android (Configurações → Google → Anúncios) — isso não impede o jogo de funcionar, só reduz a personalização do anúncio exibido.</p>
+<h2>Compras dentro do app (IAP)</h2>
+<p>O Capivara Coins oferece itens de compra dentro do aplicativo (giros, moedas e passe). Todas as compras são <strong>processadas inteiramente pelo Google Play</strong>, usando o sistema de faturamento do próprio Google (Google Play Billing).</p>
+<ul><li>O desenvolvedor <strong>não tem acesso</strong> a dados de pagamento, cartão de crédito ou informações financeiras do usuário.</li><li>Essas informações são tratadas exclusivamente pelo Google, conforme a <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Política de Privacidade do Google Play</a>.</li><li>O aplicativo recebe apenas a confirmação de que uma compra foi concluída, sem nenhum dado pessoal ou financeiro associado.</li></ul>
+<h2>Compartilhamento de dados com terceiros</h2>
+<p>O Capivara Coins não tem SDK de análise (analytics) nem rastreamento de comportamento. A única integração com terceiro é a plataforma de anúncio (Unity LevelPlay/ironSource) descrita na seção <strong>Anúncios</strong> — e ela só entra em ação quando o jogador escolhe assistir um anúncio, nunca antes disso.</p>
+<h2>Privacidade infantil</h2>
+<p>O Capivara Coins não é direcionado a crianças menores de 13 anos e não coleta intencionalmente informações pessoais de nenhum usuário, independentemente da idade. O aplicativo não pede cadastro nem login, então nenhum dado de identificação pessoal de criança é armazenado ou processado pelo desenvolvedor em nenhuma circunstância.</p>
+<h2>Classificação de conteúdo</h2>
+<p>O Capivara Coins contém <strong>simulação de jogos de cassino</strong> (como caça-níqueis) usando apenas moeda fictícia dentro do jogo. <strong>Não há apostas com dinheiro real, não há possibilidade de ganhar dinheiro ou prêmios de valor real</strong>, e o app não oferece nenhuma forma de conversão dos itens do jogo em dinheiro.</p>
+<h2>Alterações nesta política</h2>
+<p>Esta política pode ser atualizada caso o aplicativo passe a oferecer novos recursos que envolvam tratamento de dados. Qualquer alteração será refletida na data de "última atualização" no topo deste documento.</p>
+<h2>Contato</h2>
+<p>Dúvidas sobre esta política de privacidade podem ser enviadas para:</p>
+<p><strong>E-mail:</strong> erkito13@gmail.com</p>
+<p class="rodape">Capivara Coins — <code>com.steelrabbit.capivacoins</code><br>
+Steel Rabbit Software</p>
+</main>
+</body>
+</html>
