@@ -58,38 +58,155 @@
 </head>
 <body>
 <main>
-<h1>Política de Privacidade — Capivara Coins</h1>
-<p><strong>Última atualização:</strong> 27 de agosto de 2026</p>
+<h1>Política de Privacidade: Capivara Coins</h1>
+<p><strong>Última atualização:</strong> 11 de outubro de 2026</p>
 <p>Esta política de privacidade descreve como o aplicativo <strong>Capivara Coins</strong> (pacote <code>com.steelrabbit.capivacoins</code>), desenvolvido por Steel Rabbit, trata as informações dos usuários.</p>
 <h2>Resumo</h2>
-<p>O Capivara Coins é um jogo que <strong>funciona offline</strong>. Ele <strong>não pede cadastro, não usa login e não coleta dados pessoais</strong> dos usuários. A única coleta de dados no aplicativo acontece quando o próprio jogador <strong>escolhe assistir</strong> um anúncio recompensado — nesse momento, e só nesse momento, o SDK de anúncio coleta o identificador de publicidade do aparelho para exibir e medir o anúncio. Ver a seção <strong>Anúncios</strong> abaixo.</p>
-<h2>Dados coletados</h2>
-<p>O Capivara Coins não pede cadastro, não usa login, e não acessa contatos, câmera, localização ou microfone. O jogo em si — girar, construir vila, colecionar cartas, atacar vizinhos — não se conecta à internet e não envia nenhuma informação sobre o jogador.</p>
-<p>A única exceção é o <strong>anúncio recompensado opcional</strong> (ver <strong>Anúncios</strong>): quando o jogador toca em "Assistir anúncio", o aplicativo se conecta à internet só naquele momento, e o SDK do anúncio coleta o identificador de publicidade do aparelho.</p>
+<p>O Capivara Coins é um jogo que <strong>funciona sem internet</strong>. Girar, construir a vila, colecionar cartas e atacar os personagens do jogo acontecem no próprio aparelho.</p>
+<p>Quando há conexão, o jogo também tem uma parte <strong>online</strong>, com <strong>jogadores de verdade</strong>: amigos por código, vizinhos do mundo, ataques e saques entre vilas, presentes, ranking e copa. Para isso o jogo cria sozinho uma <strong>conta anônima</strong> (sem nome, sem e-mail, sem senha) e guarda num servidor o mínimo necessário para outras pessoas verem a sua vila (seção <strong>Jogo online</strong>). A parte online pode estar desligada; com ela desligada, nada disso é enviado.</p>
+<p>O que acontece fora do online:</p>
+<ul>
+<li>quando o jogador <strong>escolhe assistir</strong> um anúncio recompensado, o SDK de anúncio coleta o identificador de publicidade do aparelho (seção <strong>Anúncios</strong>);</li>
+<li>as compras são processadas pelo Google Play (seção <strong>Compras dentro do app</strong>).</li>
+</ul>
+<p><strong>Nenhum dado é vendido, e nada do jogo online é usado para anúncio.</strong></p>
+<h2>Jogo online</h2>
+<h3>Como a conta nasce</h3>
+<p>Na primeira vez que o jogo abre com a parte online ligada, ele cria uma <strong>conta anônima</strong> no Firebase Authentication (serviço do Google). Não pedimos nome, e-mail, telefone nem senha. O jogo continua funcionando sem internet; a parte online só volta a sincronizar quando a conexão volta.</p>
+<h3>Quais dados ficam no servidor</h3>
+<table>
+<thead>
+<tr>
+<th>Dado</th>
+<th>O que é</th>
+<th>Quem vê</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificador da conta</strong></td>
+<td>um código aleatório criado pelo Firebase (não tem relação com o seu nome nem com o seu aparelho)</td>
+<td>só o servidor</td>
+</tr>
+<tr>
+<td><strong>E-mail da conta Google</strong></td>
+<td><strong>não é coletado nesta versão.</strong> Se um dia o jogo oferecer vincular a conta a uma conta Google para não perder o progresso, o e-mail só será guardado se você escolher vincular, e usado apenas para você entrar de novo; esta política será atualizada antes</td>
+<td><strong>nunca é exibido</strong> a outros jogadores</td>
+</tr>
+<tr>
+<td><strong>Apelido</strong></td>
+<td>o nome que você escolhe para os outros te verem, depois de aceitar as regras da comunidade</td>
+<td>outros jogadores</td>
+</tr>
+<tr>
+<td><strong>Progresso</strong></td>
+<td>um resumo do save: vila, estrelas, nível de Lenda, moedas, escudos, giros usados, conjuntos de cartas, construções e o retrato escolhido; a data da última vez que jogou</td>
+<td>outros jogadores veem vila, estrelas, construções e retrato; o resto só o servidor (para conferir se o progresso é possível)</td>
+</tr>
+<tr>
+<td><strong>Amigos</strong></td>
+<td>a lista de quem você adicionou por código ou por convite, e quem te convidou</td>
+<td>você e cada amigo</td>
+</tr>
+<tr>
+<td><strong>Bloqueios</strong></td>
+<td>quem você bloqueou</td>
+<td>só você (quem foi bloqueado não é avisado)</td>
+</tr>
+<tr>
+<td><strong>Eventos entre vilas</strong></td>
+<td>ataques, saques, presentes e rixas que você deu e recebeu (com as frases prontas escolhidas na rixa), com o apelido de quem fez</td>
+<td>você e o outro jogador envolvido</td>
+</tr>
+<tr>
+<td><strong>Token de notificação</strong></td>
+<td>o endereço que o Google usa para entregar o aviso &quot;Sua vila foi visitada&quot;; só existe se você permitir notificações</td>
+<td>só o servidor</td>
+</tr>
+<tr>
+<td><strong>Identificador da instalação</strong></td>
+<td>um código aleatório criado pelo Firebase para cada instalação do app (não identifica você nem o aparelho), usado para entregar notificações e confirmar o App Check</td>
+<td>só o servidor</td>
+</tr>
+<tr>
+<td><strong>Denúncias</strong></td>
+<td>as denúncias que você fez (quem, motivo e o apelido que você viu) e as que recebeu</td>
+<td>só a moderação</td>
+</tr>
+<tr>
+<td><strong>Registro de compras</strong></td>
+<td>o comprovante (token) que o Google Play entrega depois de uma compra, o produto e a data</td>
+<td>só o servidor</td>
+</tr>
+<tr>
+<td><strong>Código de exclusão</strong></td>
+<td>um código secreto, mostrado só para você no painel <strong>Conta</strong>, que permite apagar a conta pela página web</td>
+<td>só você</td>
+</tr>
+</tbody></table>
+<p>O servidor também recebe, como qualquer serviço na internet, o endereço IP e dados técnicos da conexão e do aparelho (modelo, versão do Android e versão do app), usados só para entregar a resposta e se proteger de abuso. O endereço IP não é usado para descobrir onde você está. Para confirmar que os pedidos vêm do aplicativo verdadeiro, o jogo usa o <strong>Firebase App Check com Play Integrity</strong> (Google), que avalia a integridade do aparelho e do app sem enviar dados pessoais ao desenvolvedor.</p>
+<h3>Para que usamos</h3>
+<ul>
+<li>mostrar a sua vila, o seu apelido e o seu retrato aos amigos e vizinhos, e a deles a você;</li>
+<li>decidir ataques, saques, presentes, ranking e copa com as regras do jogo, e conferir que o progresso enviado é possível (contra trapaça);</li>
+<li>avisar no celular quando alguém passou pela sua vila (só com a sua permissão);</li>
+<li>moderar: esconder apelido ofensivo e tirar do jogo online quem trapaceia;</li>
+<li>confirmar compras e impedir que a mesma compra seja creditada duas vezes.</li>
+</ul>
+<p><strong>Não usamos nenhum desses dados para anúncio, não fazemos perfil de comportamento e não vendemos nem alugamos dados a ninguém.</strong> A plataforma de anúncio (Unity) não recebe nada do jogo online.</p>
+<h3>Moderação e convivência</h3>
+<p>O apelido passa por um filtro de palavras e só é aceito depois que você aceita as regras da comunidade. Não existe conversa nem texto livre entre jogadores: além do apelido, o único recado possível é, na rixa, escolher uma de seis frases prontas do próprio jogo. Em todo lugar onde aparece um jogador (diário da vizinhança, amigos, ranking, resultado do ataque e do saque) existe o botão para <strong>denunciar</strong> e para <strong>bloquear</strong>. Quando três pessoas diferentes denunciam um jogador, o apelido dele é trocado por &quot;Capivara&quot; seguido de um número até a moderação revisar.</p>
+<h3>Onde ficam e por quanto tempo</h3>
+<p>Os dados ficam nos servidores do Google Cloud/Firebase, na região de São Paulo (Brasil), e trafegam sempre criptografados (HTTPS). Ficam guardados <strong>enquanto a conta existir</strong>. As listas de vizinhos do dia que outros jogadores receberam expiram no fim do dia.</p>
+<h3>Como apagar a conta e os dados</h3>
+<ul>
+<li><strong>No jogo:</strong> Menu → Configurações → <strong>Conta</strong> → <strong>Apagar minha conta</strong> (é preciso digitar APAGAR para confirmar).</li>
+<li><strong>Pela internet, mesmo sem o aparelho:</strong> na página <strong>apagar-conta</strong> do jogo (endereço no fim desta política), digitando o <strong>código de exclusão</strong> que aparece no painel Conta. Como a conta não tem nome nem e-mail, esse código é a única forma de provar que ela é sua. Guarde-o e não mostre a ninguém.</li>
+<li><strong>Por e-mail:</strong> se não conseguir pelo jogo nem pela página, escreva para o contato abaixo informando o <strong>código de exclusão</strong>.</li>
+</ul>
+<p>Ao apagar, somem do servidor o perfil, o apelido, o progresso publicado, os amigos (dos dois lados), os bloqueios, a caixa de eventos, os códigos, as linhas de ranking, as denúncias feitas e recebidas, o token de notificação e o próprio login. Nos eventos que ficaram na vila de outros jogadores, o seu apelido é trocado por &quot;Alguém&quot;. <strong>Fica apenas o registro das compras, sem ligação com a conta</strong>, pelo tempo exigido pelas obrigações fiscais e para impedir que a mesma compra seja creditada de novo. O seu jogo <strong>continua no aparelho</strong>, sem a parte online.</p>
 <h2>Onde ficam salvos os dados do jogo</h2>
-<p>O progresso do jogo (moedas, giros, conquistas, configurações, etc.) é salvo <strong>apenas localmente</strong>, dentro do próprio aparelho do usuário. Esses dados nunca saem do dispositivo, não são enviados para nenhum servidor e não são acessados pelo desenvolvedor. Se o aplicativo for desinstalado, esses dados são apagados junto.</p>
+<p>O progresso do jogo (moedas, giros, conquistas, configurações, etc.) é salvo <strong>no próprio aparelho</strong>. Com a parte online ligada, um <strong>resumo</strong> desse progresso é enviado ao servidor, como descrito em <strong>Jogo online</strong>; o save completo nunca sai do aparelho. O próprio Android pode incluir o save no backup automático da sua conta Google (recurso do sistema, controlado por você em Configurações → Google → Backup); fora isso, desinstalar o aplicativo apaga o save local.</p>
 <h2>Anúncios</h2>
-<p>O Capivara Coins exibe <strong>um único tipo de anúncio: recompensado (rewarded), e sempre opcional</strong>. Não existe anúncio que apareça sozinho, entre telas ou durante o jogo — o jogador só vê um anúncio quando ele mesmo toca no botão pra assistir, em troca de uma recompensa específica (giros grátis).</p>
+<p>O Capivara Coins exibe <strong>um único tipo de anúncio: recompensado (rewarded), e sempre opcional</strong>. Não existe anúncio que apareça sozinho, entre telas ou durante o jogo: o jogador só vê um anúncio quando ele mesmo toca no botão pra assistir, em troca de uma recompensa específica (giros grátis).</p>
 <p>A veiculação é feita pela plataforma <strong>Unity LevelPlay / ironSource</strong>. Quando o jogador escolhe assistir um anúncio, essa plataforma coleta:</p>
-<ul><li>o <strong>identificador de publicidade</strong> do aparelho (Advertising ID do Android), usado para escolher e medir o anúncio exibido;</li><li>informações técnicas do aparelho e da sessão de anúncio (modelo, versão do sistema, dados de desempenho), conforme a própria <a href="https://unity.com/pt/legal/game-player-and-app-user-privacy-policy" rel="noopener noreferrer" target="_blank">Política de Privacidade da Unity</a>.</li></ul>
-<p>Esse dado <strong>não é coletado, guardado nem visto pelo desenvolvedor</strong> — ele vai direto do aparelho do jogador para a Unity/ironSource e as redes de publicidade que participam da veiculação. O desenvolvedor não recebe nenhuma informação pessoal do jogador nesse processo, só a confirmação de que um anúncio foi assistido até o fim (para liberar a recompensa).</p>
-<p>O jogador pode limitar ou redefinir o identificador de publicidade a qualquer momento, direto nas configurações de privacidade do próprio Android (Configurações → Google → Anúncios) — isso não impede o jogo de funcionar, só reduz a personalização do anúncio exibido.</p>
+<ul>
+<li>o <strong>identificador de publicidade</strong> do aparelho (Advertising ID do Android), o identificador de conjunto de apps (App Set ID) e identificadores próprios da plataforma, usados para escolher e medir o anúncio exibido e evitar fraude;</li>
+<li>a <strong>localização aproximada</strong>, deduzida do endereço IP (nunca a localização precisa: o jogo não pede permissão de localização);</li>
+<li>as <strong>interações com o anúncio</strong> (visualização, toques, se foi assistido até o fim) e o tempo de uso do app;</li>
+<li>informações técnicas do aparelho e da sessão de anúncio (modelo, versão do sistema, dados de desempenho e diagnóstico);</li>
+<li>informações sobre compras dentro do app, quando a plataforma as recebe para medir anúncios,</li>
+</ul>
+<p>conforme a própria <a href="https://unity.com/pt/legal/game-player-and-app-user-privacy-policy">Política de Privacidade da Unity</a> e a <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/google-data-safety-questionnaire">declaração de Segurança dos dados do LevelPlay</a>. A Unity/ironSource usa esses dados para publicidade, análise de desempenho dos anúncios e prevenção de fraude, e pode repassá-los às redes que participam da veiculação. Nada disso é coletado antes de você tocar no botão de assistir um anúncio pela primeira vez.</p>
+<p>Esse dado <strong>não é coletado, guardado nem visto pelo desenvolvedor</strong>: ele vai direto do aparelho do jogador para a Unity/ironSource e as redes de publicidade que participam da veiculação. O desenvolvedor só recebe a confirmação de que um anúncio foi assistido até o fim (para liberar a recompensa). A plataforma de anúncio não recebe o apelido, os amigos nem nenhum outro dado do jogo online.</p>
+<p>O jogador pode limitar ou redefinir o identificador de publicidade a qualquer momento, direto nas configurações de privacidade do próprio Android (Configurações → Google → Anúncios). Isso não impede o jogo de funcionar, só reduz a personalização do anúncio exibido.</p>
 <h2>Compras dentro do app (IAP)</h2>
 <p>O Capivara Coins oferece itens de compra dentro do aplicativo (giros, moedas e passe). Todas as compras são <strong>processadas inteiramente pelo Google Play</strong>, usando o sistema de faturamento do próprio Google (Google Play Billing).</p>
-<ul><li>O desenvolvedor <strong>não tem acesso</strong> a dados de pagamento, cartão de crédito ou informações financeiras do usuário.</li><li>Essas informações são tratadas exclusivamente pelo Google, conforme a <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Política de Privacidade do Google Play</a>.</li><li>O aplicativo recebe apenas a confirmação de que uma compra foi concluída, sem nenhum dado pessoal ou financeiro associado.</li></ul>
+<ul>
+<li>O desenvolvedor <strong>não tem acesso</strong> a dados de pagamento, cartão de crédito ou informações financeiras do usuário.</li>
+<li>Essas informações são tratadas exclusivamente pelo Google, conforme a <a href="https://policies.google.com/privacy">Política de Privacidade do Google Play</a>.</li>
+<li>O aplicativo recebe a confirmação da compra e o comprovante (token) do Google Play. Com a parte online ligada, esse comprovante, o produto e a data são enviados ao servidor do jogo só para confirmar a compra com o Google e não creditá-la duas vezes.</li>
+</ul>
 <h2>Compartilhamento de dados com terceiros</h2>
-<p>O Capivara Coins não tem SDK de análise (analytics) nem rastreamento de comportamento. A única integração com terceiro é a plataforma de anúncio (Unity LevelPlay/ironSource) descrita na seção <strong>Anúncios</strong> — e ela só entra em ação quando o jogador escolhe assistir um anúncio, nunca antes disso.</p>
-<h2>Privacidade infantil</h2>
-<p>O Capivara Coins não é direcionado a crianças menores de 13 anos e não coleta intencionalmente informações pessoais de nenhum usuário, independentemente da idade. O aplicativo não pede cadastro nem login, então nenhum dado de identificação pessoal de criança é armazenado ou processado pelo desenvolvedor em nenhuma circunstância.</p>
+<p>O Capivara Coins não tem SDK de análise (analytics) nem rastreamento de comportamento, e não vende dados. Os terceiros envolvidos são:</p>
+<ul>
+<li><strong>Google Firebase / Google Cloud</strong> (conta anônima, banco de dados, funções do servidor, notificações e App Check), que processa os dados do jogo online <strong>em nome do desenvolvedor</strong>, conforme os <a href="https://firebase.google.com/support/privacy">termos de privacidade do Firebase</a>;</li>
+<li><strong>Unity LevelPlay / ironSource</strong>, só quando o jogador escolhe assistir um anúncio (seção <strong>Anúncios</strong>);</li>
+<li><strong>Google Play</strong>, nas compras (seção <strong>Compras dentro do app</strong>).</li>
+</ul>
+<p>Outros jogadores veem só o que está marcado como visível na tabela da seção <strong>Jogo online</strong> (apelido, retrato, vila, estrelas, construções e os eventos entre vocês). O e-mail, quando existe, nunca é mostrado.</p>
+<h2>Público e idade</h2>
+<p>O Capivara Coins é destinado a <strong>maiores de 18 anos</strong> e não é direcionado a crianças. Não coletamos intencionalmente dados de menores; se você souber de uma conta de menor, escreva para o contato abaixo e ela será apagada.</p>
+<h2>Seus direitos (LGPD)</h2>
+<p>Você pode pedir confirmação, acesso, correção, anonimização ou exclusão dos seus dados, e revogar o consentimento das notificações a qualquer momento (nas configurações do Android). A exclusão pode ser feita sozinha, pelo jogo ou pela página web (seção <strong>Como apagar a conta e os dados</strong>); os outros pedidos, pelo e-mail abaixo. O controlador dos dados é a Steel Rabbit.</p>
 <h2>Classificação de conteúdo</h2>
-<p>O Capivara Coins contém <strong>simulação de jogos de cassino</strong> (como caça-níqueis) usando apenas moeda fictícia dentro do jogo. <strong>Não há apostas com dinheiro real, não há possibilidade de ganhar dinheiro ou prêmios de valor real</strong>, e o app não oferece nenhuma forma de conversão dos itens do jogo em dinheiro.</p>
+<p>O Capivara Coins contém <strong>simulação de jogos de cassino</strong> (como caça-níqueis) usando apenas moeda fictícia dentro do jogo. <strong>Não há apostas com dinheiro real, não há possibilidade de ganhar dinheiro ou prêmios de valor real</strong>, e o app não oferece nenhuma forma de conversão dos itens do jogo em dinheiro, nem entre jogadores: presentes, ataques e saques mexem só com itens fictícios do jogo.</p>
 <h2>Alterações nesta política</h2>
-<p>Esta política pode ser atualizada caso o aplicativo passe a oferecer novos recursos que envolvam tratamento de dados. Qualquer alteração será refletida na data de "última atualização" no topo deste documento.</p>
+<p>Esta política pode ser atualizada caso o aplicativo passe a oferecer novos recursos que envolvam tratamento de dados. Qualquer alteração será refletida na data de &quot;última atualização&quot; no topo deste documento.</p>
 <h2>Contato</h2>
 <p>Dúvidas sobre esta política de privacidade podem ser enviadas para:</p>
-<p><strong>E-mail:</strong> erkito13@gmail.com</p>
-<p class="rodape">Capivara Coins — <code>com.steelrabbit.capivacoins</code><br>
-Steel Rabbit Software</p>
+<p><strong>E-mail:</strong> <a href="mailto:support@intractstudio.com">support@intractstudio.com</a></p>
+<p><strong>Página para apagar a conta:</strong> <a href="https://capivara-coins.web.app/apagar-conta.html">https://capivara-coins.web.app/apagar-conta.html</a></p>
+
 </main>
 </body>
 </html>
